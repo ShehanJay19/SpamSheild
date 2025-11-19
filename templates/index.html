@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpamSheild</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+    <div class="box">
+        <h1>Welcome to SpamSheild</h1>
+        <p>Your ultimate solution to block spam and unwanted messages.</p>
+
+        <form method="POST">
+            <input type="text" name="message" placeholder="Enter your message here" required>
+            <button type="submit">Check Message</button>
+        </form>
+        {% if result %}
+            <h2>Result: {{ result }}</h2>
+        {% endif %}
+
+    </div>
+</body>
+</html>

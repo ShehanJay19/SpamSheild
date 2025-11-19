@@ -1,0 +1,73 @@
+/* /E:/Github repo/SpamSheild/static/css/style.css */
+
+/* Base page */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    background: #000;                 /* black background */
+    color: #fff;                      /* default white text */
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Centering helper
+     - .centered: horizontally centers block-level element and centers text
+     - .centered.full-height: centers horizontally and vertically (use on a full-height wrapper)
+*/
+.centered {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.centered.full-height {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    flex-direction: column;
+}
+
+/* Button styling */
+button,
+.btn {
+    background-color: #28a745;        /* green button */
+    color: #fff;                      /* white text on button */
+    border: none;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;             /* keep Arial */
+    transition: transform 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* Hover / active effects */
+button:hover,
+.btn:hover {
+    background-color: #218838;        /* slightly darker green on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(33, 56, 56, 0.25);
+}
+button:active,
+.btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Focus accessibility */
+button:focus,
+.btn:focus {
+    outline: 3px solid rgba(40, 167, 69, 0.25);
+    outline-offset: 2px;
+}
+
+/* Optional small/large variants */
+.btn-sm { padding: 0.3rem 0.6rem; font-size: 0.875rem; }
+.btn-lg { padding: 0.9rem 1.4rem; font-size: 1.125rem; }
